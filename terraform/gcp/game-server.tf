@@ -47,7 +47,7 @@ resource "google_compute_instance" "game_server" {
 
   boot_disk {
     initialize_params {
-      size  = 30
+      size  = 80
       image = "windows-cloud/windows-2022"
     }
   }
