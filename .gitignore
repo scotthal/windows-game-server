@@ -1,0 +1,7 @@
+*accessKeys.csv
+aws-access-keys.sh
+credential.json
+service-principal.*
+terraform.tfstate
+terraform.tfstate.backup
+.terraform
