@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-  google = {
+    google = {
       source  = "hashicorp/google"
       version = "4.23.0"
     }
@@ -50,5 +50,10 @@ resource "google_compute_instance" "game_server" {
       size  = 30
       image = "windows-cloud/windows-2022"
     }
+  }
+
+  network_interface {
+    network = google_compute_network.game_server_network.self_link
+    access_config {}
   }
 }
