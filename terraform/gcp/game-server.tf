@@ -29,7 +29,12 @@ resource "google_compute_firewall" "game_server_firewall" {
 
   allow {
     protocol = "tcp"
-    ports    = ["3389"]
+    ports    = ["3389", "9876", "9877"]
+  }
+
+  allow {
+    protocol = "udp"
+    ports    = ["9876", "9877"]
   }
 
   source_ranges = ["0.0.0.0/0"]
